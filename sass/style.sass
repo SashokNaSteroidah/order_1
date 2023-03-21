@@ -35,9 +35,17 @@ input
   -webkit-appearance: none
   border-radius: 0
 
+@mixin parag_scr($pad)
+  padding: $pad
+  transform: translateX(-20vw)
+  color: white
+  font-size: 40px
+  font-weight: bold
+
+$color_back: #D9D9D9
 
 header
-  background: #D9D9D9
+  background: $color_back
   height: 75px
 
   nav
@@ -76,6 +84,20 @@ header
     &::placeholder
       color: white
 
+
+.flex
+  display: flex
+  justify-content: space-between
+  width: 70vw
+  margin: 0 auto
+
+main
+  h1
+    margin-top: 50px
+    font-weight: bold
+    font-size: 40px
+    margin-left: 15vw
+
 .first_scr
   background-image: url("../img/Rectangle 3.png")
   background-repeat: no-repeat
@@ -86,15 +108,126 @@ header
   margin: 70px auto 0
 
   p
-    padding: 300px 0 50px 20px
-    transform: translateX(-13vw)
+    @include parag_scr(480px 0 50px 20px)
+
+.second_scr
+  background-image: url("../img/Rectangle 5.png")
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  //width: 700px
+  //height: 500px
+  margin: 70px 0 0 0
+
+  p
+    padding: 300px 350px 50px 50px
     color: white
     font-size: 20px
     font-weight: bold
 
-main
-  h1
-    margin-top: 50px
+.ther_scr
+  background-image: url("../img/Rectangle 7.png")
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  //width: 400px
+  //height: 500px
+  margin: 70px 0 0 0
+
+  p
+    padding: 300px 230px 0 100px
+    color: white
+    font-size: 20px
     font-weight: bold
-    font-size: 40px
-    margin-left: 27.5vw
+
+.for_scr
+  background-image: url("../img/Rectangle 8.png")
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  //width: 700px
+  //height: 500px
+  margin: 70px 0 0 0
+
+  p
+    padding: 300px 350px 50px 50px
+    color: white
+    font-size: 20px
+    font-weight: bold
+
+.five_src
+  background-image: url("../img/Rectangle 6.png")
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  //width: 400px
+  //height: 500px
+  margin: 70px 0 0 0
+
+  p
+    padding: 300px 230px 0 100px
+    color: white
+    font-size: 20px
+    font-weight: bold
+
+.option
+  width: 70vw
+  margin: 100px auto
+
+  article
+    display: flex
+    justify-content: space-between
+
+    &:not(:first-child)
+      padding-top: 100px
+
+    p
+      text-align: center
+      padding-top: 10px
+      font-weight: bold
+      font-size: 20px
+
+.feedback_form
+  background: #E8AB50
+  width: 70vw
+  margin: 0 auto 100px
+  border-radius: 20px
+  box-sizing: border-box
+  padding: 100px 20px
+
+  h2
+    text-align: center
+    font-size: 30px
+    font-weight: bold
+
+  div
+    margin: 0 auto
+    text-align: center
+    padding-top: 30px
+
+    input[type="text"]
+      border: none
+      border-radius: 25px
+      padding: 10px 20px
+      width: 30vw
+
+    input[type="button"]
+      border: none
+      border-radius: 25px
+      padding: 10px 20px
+      width: 5vw
+      background: #7A9E2C
+      color: white
+      margin-left: 10px
+
+footer
+  background: #D9D9D9
+  box-sizing: border-box
+  padding: 30px 0
+
+  section
+    display: flex
+    justify-content: space-between
+    width: 70vw
+    margin: 0 auto
+
+    h2
+      padding: 20px 0
+      font-weight: bold
+      font-size: 30px
